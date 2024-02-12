@@ -21,8 +21,8 @@ const Heroes = () => {
                             </p>
                         </div>
                         <Image
-                            height={400}
-                            width={400}
+                            height={500}
+                            width={500}
                             alt="Image"
                             src="/images/typo.png"
                         />

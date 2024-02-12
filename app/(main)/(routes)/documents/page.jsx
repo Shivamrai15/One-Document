@@ -36,7 +36,7 @@ const DocumentsPage = () => {
                 width="300"
             />
             <h2 className="text-lg font-semibold text-zinc-700 dark:text-zinc-300">
-                Welcome to {user?.firstName}'s Notebook
+                Welcome to {user?.firstName}&apos; Notebook
             </h2>
             <Button
                 onClick = {onCreate}

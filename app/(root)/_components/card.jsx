@@ -6,12 +6,12 @@ export const Card = ({
     desciption
 }) => {
     return (
-        <div className="h-56 w-56 bg-white dark:bg-neutral-950/50 rounded-lg p-4 flex flex-col items-center gap-y-4 shadow-[0_0_30px_#95c0e8]  dark:shadow-[0_0_30px_#263747]">
+        <div className="h-56 w-72 bg-white dark:bg-neutral-950/50 rounded-lg p-4 flex flex-col gap-y-4">
             <Icon className = "h-10 w-10 text-orange-500 mt-4"/>
-            <h3 className="text-left w-full dark:text-white text-lg font-semibold">
+            <h3 className="text-left w-full dark:text-white text-lg md:text-2xl font-semibold">
                 {title}
             </h3>
-            <p className="dark:text-white text-sm">{desciption}</p>
+            <p className="dark:text-zinc-300 text-zinc-600 text-sm md:text-base">{desciption}</p>
         </div>
     )
 }
