@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
     title: 'One Notebook',
-    description : "One Notebook is a revolutionary document editing platform that empowers your ideas with seamless organization, boundless creativity, and user-friendly features.",
+    description : "Craft worlds of words and visuals. Nest & Embed lets you create interconnected documents, enrich them with images, and share your immersive journeys. Dive deep, organize seamlessly, and express yourself like never before",
     keywords : ["document editing",
     "organization",
     "creativity",
