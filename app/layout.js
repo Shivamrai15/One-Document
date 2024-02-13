@@ -29,7 +29,11 @@ export const metadata = {
     "landing page",
     "recover deleted files",
     "innovative",
-    "user-centric design"]
+    "user-centric design"],
+    openGraph: {
+        images: ["https://res.cloudinary.com/dkaj1swfy/image/upload/v1707840762/zlhgsol9dxeuwwq8cvfk.png"],
+        type : "website",
+    },
 };
 
 export default function RootLayout({ children }) {
