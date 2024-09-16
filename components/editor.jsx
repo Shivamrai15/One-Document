@@ -1,10 +1,9 @@
 "use client";
 
-import {
-    BlockNoteView,
-    useBlockNote
-} from "@blocknote/react";
-import "@blocknote/core/style.css";
+import { useCreateBlockNote } from "@blocknote/react";
+import { BlockNoteView } from "@blocknote/mantine";
+import "@blocknote/core/fonts/inter.css";
+import "@blocknote/mantine/style.css";
 import { useTheme } from "next-themes";
 import { useEdgeStore } from "@/lib/edgestore";
 
@@ -21,27 +20,21 @@ const Editor = ({
         const res = await edgestore.publicFiles.upload({
             file
         });
-
         return res.url;
     }
 
-    const editor = useBlockNote({
-        editable,
+    const editor = useCreateBlockNote({
         initialContent : initialContent ? JSON.parse(initialContent) : undefined,
-        onEditorContentChange : (editor) => {
-            onChange(JSON.stringify(editor.topLevelBlocks, null, 2))
-        },
         uploadFile : handleUpload
     });
-
 
     return (
         <div>
             <BlockNoteView
                 editor={editor}
                 theme={resolvedTheme === "dark" ? "dark" : "light"}
-                draggable
-                spellCheck
+                onChange={()=>onChange(JSON.stringify(editor.document), null, 2)}
+
             />
         </div>
     );
