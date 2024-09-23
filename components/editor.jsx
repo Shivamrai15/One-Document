@@ -31,10 +31,10 @@ const Editor = ({
     return (
         <div>
             <BlockNoteView
+                editable={editable}
                 editor={editor}
                 theme={resolvedTheme === "dark" ? "dark" : "light"}
                 onChange={()=>onChange(JSON.stringify(editor.document), null, 2)}
-
             />
         </div>
     );
